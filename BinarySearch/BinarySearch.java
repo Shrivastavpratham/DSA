@@ -2,7 +2,7 @@ package BinarySearch;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int [] arr= {1,2,3,4,5,6,7,8};
+        int [] arr= {8,7,6,5,4,3,2,1};
         int target = 1;
         int ans = binarySearch(arr, target);
         System.out.println(ans);
@@ -17,10 +17,10 @@ public class BinarySearch {
             int mid = start + (end- start) / 2;
 
             if (target < arr[mid]){
-            //if (target < arr[mid]) for decending order  
+            //if (target > arr[mid]) for decending order  
                 end = mid -1;
             }else if (target > arr[mid]){
-            //else if (target > arr[mid]) for decending order 
+            //else if (target < arr[mid]) for decending order 
                 start= mid + 1;
             } else {
                 return mid ;
